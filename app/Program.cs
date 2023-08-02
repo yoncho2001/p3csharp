@@ -28,7 +28,8 @@ namespace task2
     {
         public static void Result()
         {
-            double weight = Convert.ToDouble(Console.ReadLine()) * 0.17;
+            const double procent = 0.17;
+            double weight = Convert.ToDouble(Console.ReadLine()) * procent;
             Console.WriteLine(String.Format("{0:0.000}", weight));
 
         }
@@ -100,7 +101,21 @@ namespace task6
     {
         public static void Result()
         {
-            
+            int number = Convert.ToInt32(Console.ReadLine());
+            int a = number / 1000;
+            number %= 1000;
+
+            int b = number / 100;
+            number %= 100;
+
+            int c = number / 10;
+            number %= 10;
+            int d = number;
+
+            Console.WriteLine(a + b + c + d);
+            Console.WriteLine(Convert.ToString(d) + Convert.ToString(c) + Convert.ToString(b) + Convert.ToString(a));
+            Console.WriteLine(Convert.ToString(d) + Convert.ToString(a) + Convert.ToString(b) + Convert.ToString(c));
+            Console.WriteLine(Convert.ToString(a) + Convert.ToString(c) + Convert.ToString(b) + Convert.ToString(d));
         }
     }
 }
