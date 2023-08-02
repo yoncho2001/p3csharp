@@ -1,0 +1,15 @@
+C:\programs\C#\app\bin\Debug\net7.0\app.exe
+C:\programs\C#\app\bin\Debug\net7.0\app.deps.json
+C:\programs\C#\app\bin\Debug\net7.0\app.runtimeconfig.json
+C:\programs\C#\app\bin\Debug\net7.0\app.dll
+C:\programs\C#\app\bin\Debug\net7.0\app.pdb
+C:\programs\C#\app\obj\Debug\net7.0\app.csproj.AssemblyReference.cache
+C:\programs\C#\app\obj\Debug\net7.0\app.GeneratedMSBuildEditorConfig.editorconfig
+C:\programs\C#\app\obj\Debug\net7.0\app.AssemblyInfoInputs.cache
+C:\programs\C#\app\obj\Debug\net7.0\app.AssemblyInfo.cs
+C:\programs\C#\app\obj\Debug\net7.0\app.csproj.CoreCompileInputs.cache
+C:\programs\C#\app\obj\Debug\net7.0\app.dll
+C:\programs\C#\app\obj\Debug\net7.0\refint\app.dll
+C:\programs\C#\app\obj\Debug\net7.0\app.pdb
+C:\programs\C#\app\obj\Debug\net7.0\app.genruntimeconfig.cache
+C:\programs\C#\app\obj\Debug\net7.0\ref\app.dll
