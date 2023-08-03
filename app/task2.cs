@@ -4,7 +4,7 @@ namespace task2
     {
         public static void Result()
         {
-            const  double PERCENT = 0.17;
+            const  double MOON_GRAVITY_PERCENT = 0.17;
             double weight;
 
             if(!double.TryParse(Console.ReadLine(), out weight)){
@@ -12,7 +12,7 @@ namespace task2
                 return ;
             }
 
-            weight *= PERCENT;
+            weight *= MOON_GRAVITY_PERCENT;
             Console.WriteLine(String.Format("{0:0.000}", weight));
         }
     }

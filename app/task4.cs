@@ -7,8 +7,8 @@ namespace task4
             double widht;
             double height;
 
-            if (!double.TryParse(Console.ReadLine(), out widht) ||
-               !double.TryParse(Console.ReadLine(), out height))
+            if (!double.TryParse(Console.ReadLine(), out widht)
+                || !double.TryParse(Console.ReadLine(), out height))
             {
                 Console.WriteLine("Incorrect input");
                 return;
