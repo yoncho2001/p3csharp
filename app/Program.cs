@@ -1,4 +1,9 @@
 ﻿using System;
+using task1;
+using task2;
+using task3;
+using task4;
+using task5;
 using task6;
 using task7;
 using task8;
@@ -21,7 +26,6 @@ namespace MainNS
                 Console.WriteLine("Incorrect input");
                 return;
             }
-
 
             switch (tasks)
             {
@@ -56,7 +60,6 @@ namespace MainNS
                     Console.WriteLine("Incorrect input");
                     break;
             }
-
         }
     }
 }
