@@ -4,6 +4,11 @@ using task2;
 using task3;
 using task4;
 using task5;
+using task6;
+using task7;
+using task8;
+using task9;
+using task10;
 
 namespace MainNS
 {
@@ -36,6 +41,21 @@ namespace MainNS
                     break;
                 case "task 5":
                     task5.QuadraticEquation.Result();
+                    break;
+                case "task 6":
+                    task6.SumOfFiveNumbers.Result();
+                    break;
+                case "task 7":
+                    task7.NumbersFromOnetoN.Result();
+                    break;
+                case "task 8":
+                    task8.SumOfNNumbers.Result();
+                    break;
+                case "task 9":
+                    task9.FibonacciNumbers.Result();
+                    break;
+                case "task 10":
+                    task10.Interval.Result();
                     break;
                 default:
                     Console.WriteLine("Incorrect input");
