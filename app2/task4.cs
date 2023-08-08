@@ -24,6 +24,8 @@ namespace task4
             {
                 output = number2.ToString();
             }
+            
+            // output = number > number2 ? number.ToString() : number2.ToString();
 
             Console.WriteLine(output);
         }

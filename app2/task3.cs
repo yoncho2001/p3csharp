@@ -1,3 +1,5 @@
+using functions;
+
 namespace task3
 {
     public class Circle
@@ -13,8 +15,8 @@ namespace task3
                 return;
             }
 
-            double perimeterResult = radius * PI * 2;
-            double areaResult = Math.Pow(radius, 2) * PI;
+            double perimeterResult = Functions.RadiusOfCircle(radius);
+            double areaResult = Functions.AreaOfCircle(radius);
             Console.WriteLine("{0:0.00}" + "\n" + "{1:0.00}", perimeterResult, areaResult);
         }
     }

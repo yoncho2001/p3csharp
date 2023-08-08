@@ -1,7 +1,8 @@
+using functions;
+
 namespace task5
 {
     public class QuadraticEquation
-
     {
         public static void Result()
         {
@@ -18,15 +19,15 @@ namespace task5
                 return;
             }
 
-            if (Math.Pow(number2, 2) < 4 * number * number3)
+            if (Functions.DeterminantOnSecondDegree(a, b, c) < 0)
             {
                 output = "no real roots";
             }
             else
             {
-                double determinanta = Math.Sqrt((Math.Pow(number2, 2) - 4 * number * number3));
-                double root1 = (-number2 + determinanta) / (2 * number);
-                double root2 = (-number2 - determinanta) / (2 * number);
+                double determinant = Math.Sqrt(Functions.DeterminantaOnSecondDegree(a, b, c));
+                double root1 = (-number2 + determinant) / (2 * number);
+                double root2 = (-number2 - determinant) / (2 * number);
                 if (root1 == root2)
                 {
                     output = root1.ToString();

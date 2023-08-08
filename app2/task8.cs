@@ -4,24 +4,24 @@ namespace task8
     {
         public static void Result()
         {
-            int number;
+            int countOnN;
             double sum = 0;
 
-            if (!int.TryParse(Console.ReadLine(), out number))
+            if (!int.TryParse(Console.ReadLine(), out countOnN))
             {
                 Console.WriteLine("Incorrect input");
                 return;
             }
 
-            for (int i = 0; i < number; i++)
+            for (int i = 0; i < countOnN; i++)
             {
-                if (!double.TryParse(Console.ReadLine(), out double temp))
+                if (!double.TryParse(Console.ReadLine(), out double tempNumber))
                 {
                     Console.WriteLine("Incorrect input");
                     return;
                 }
 
-                sum += temp;
+                sum += tempNumber;
             }
 
             Console.WriteLine(sum);
