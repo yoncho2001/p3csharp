@@ -1,3 +1,5 @@
+using functions;
+
 namespace task5
 {
     public class Calculate
@@ -17,21 +19,10 @@ namespace task5
 
             for (int i = 1; i <= numberN; i++)
             {
-                sum += Factorial(i) / Math.Pow(x, i);
+                sum += Functions.Factorial(i) / Math.Pow(x, i);
             }
 
             Console.WriteLine("{0:0.00000}", sum);
-        }
-
-        public static double Factorial(double number)
-        {
-            double factorial = 1;
-
-            for (int i = 1; i <= number; i++)
-            {
-                factorial = factorial * i;
-            }
-            return factorial;
         }
     }
 }

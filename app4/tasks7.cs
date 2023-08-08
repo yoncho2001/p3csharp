@@ -1,8 +1,8 @@
 using functions;
 
-namespace task6
+namespace task7
 {
-    public class CalculateAgain
+    public class CalculateThree
     {
         public static void Result()
         {
@@ -17,8 +17,8 @@ namespace task6
                 return;
             }
 
-            sum = Functions.Factorial(numberN) / Functions.Factorial(numberK) ;
-            Console.WriteLine("{0:0.00}", sum);
+            sum = Functions.Factorial(numberN) / (Functions.Factorial(numberK) * Functions.Factorial(numberN - numberK)) ;
+            Console.WriteLine("{0:0}", sum);
         }
     }
 }
