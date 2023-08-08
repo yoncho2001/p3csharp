@@ -1,3 +1,5 @@
+using functions;
+
 namespace task10
 {
     public class PointCircleRectangle
@@ -6,7 +8,7 @@ namespace task10
         {
             double x;
             double y;
-            string output = "incorect";
+            string output = "";
 
             if (!double.TryParse(Console.ReadLine(), out x)
                 || !double.TryParse(Console.ReadLine(), out y))
@@ -27,7 +29,7 @@ namespace task10
             const double WIDTH_RECTANGLE = 6;
             const double HEIGHT_RECTANGLE = 2;
 
-            double result = Math.Sqrt(Math.Pow(x - CIRCLE_X, 2) + Math.Pow(y - CIRCLE_Y, 2));
+            double result = Functions.PitagorTeorem(x - CIRCLE_X, y - CIRCLE_Y);
 
             if (result <= CIRCLE_R)
             {
@@ -40,16 +42,9 @@ namespace task10
                 inRectangle = true;
             }
 
-            if (inCircle)
-            {
-                output = inRectangle ? "inside circle inside rectangle" : "inside circle outside rectangle";
-
-            }
-            else
-            {
-                output = inRectangle ? "outside circle inside rectangle" : "outside circle outside rectangle";
-
-            }
+            output += inCircle ? "inside circle " : "outside circle ";
+            output += inRectangle ? "inside rectangle" : "outside rectangle";
+            Console.WriteLine(output);
         }
     }
 }
