@@ -13,7 +13,6 @@ namespace task4
                 Console.WriteLine("incorect");
             }
 
-
             for (int i = 0; i <= cards.Length; i++)
             {
                 if (cards[i] == input)

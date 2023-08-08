@@ -50,11 +50,11 @@ namespace task3
 
                 sum += newNumber;
             }
-            
+
             output += "min= " + min.ToString("0.00") + "\n";
             output += "max= " + max.ToString("0.00") + "\n";
             output += "sum= " + sum.ToString("0.00") + "\n";
-            output += "avg= " + (sum/numberOfN).ToString("0.00");
+            output += "avg= " + (sum / numberOfN).ToString("0.00");
             Console.WriteLine(output);
         }
     }

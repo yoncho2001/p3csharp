@@ -36,11 +36,14 @@ namespace MainNS
                 case "task 6":
                     task6.CalculateAgain.Result();
                     break;
+                case "task 7":
+                    task7.CalculateThree.Result();
+                    break;
                 case "task 8":
-                  //  task8.DigitAsWord.Result();
+                    task8.CatalanNumbers.Result();
                     break;
                 case "task 9":
-                 //   task9.IntDoubleString.Result();
+                    task9.MatrixOfNumbers.Result();
                     break;
                 default:
                     Console.WriteLine("Incorrect input");
