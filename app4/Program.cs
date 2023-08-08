@@ -33,8 +33,8 @@ namespace MainNS
                 case "task 5":
                     task5.Calculate.Result();
                     break;
-                case "task 7":
-                  //  task7.SortThreeNumbers.Result();
+                case "task 6":
+                    task6.CalculateAgain.Result();
                     break;
                 case "task 8":
                   //  task8.DigitAsWord.Result();
