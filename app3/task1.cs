@@ -15,9 +15,9 @@ namespace task1
             }
             if (number1 > number2)
             {
-                double temp = number1;
-                number1 = number2;
-                number2 = temp;
+                number1 = number1 + number2;
+                number2 = number1 - number2;
+                number1 = number1 - number2;
             }
 
             Console.WriteLine(number1 + " " + number2);

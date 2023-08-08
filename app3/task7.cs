@@ -30,6 +30,7 @@ namespace task7
                 between = number2;
                 min = number1;
             }
+            
             if (between > number3)
             {
                 max = between;

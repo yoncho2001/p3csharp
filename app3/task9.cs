@@ -35,6 +35,9 @@ namespace task9
                     string inputText = Console.ReadLine();
                     output += inputText + "*";
                     break;
+                default:
+                    output = "incorect";
+                    break;
             }
 
             Console.WriteLine(output);

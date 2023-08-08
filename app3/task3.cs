@@ -30,6 +30,10 @@ namespace task3
                     break;
             }
 
+            /* we can use array also
+                outcome = Array.Exists(cards, elem => elem == card) ? "yes " : "no ";
+                outcome += card;*/
+
             Console.WriteLine(outcome);
         }
     }
