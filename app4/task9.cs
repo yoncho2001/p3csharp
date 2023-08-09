@@ -1,5 +1,3 @@
-using functions;
-
 namespace task9
 {
     public class MatrixOfNumbers
