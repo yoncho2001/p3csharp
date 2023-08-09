@@ -7,7 +7,7 @@ namespace task8
         public static void Result()
         {
             int numberN;
-            double sum ;
+            double sum;
 
             if (!int.TryParse(Console.ReadLine(), out numberN))
             {
@@ -15,7 +15,7 @@ namespace task8
                 return;
             }
 
-            sum = Functions.Factorial(2 * numberN) / (Functions.Factorial(numberN + 1) * Functions.Factorial(numberN)) ;
+            sum = Functions.Factorial(2 * numberN) / (Functions.Factorial(numberN + 1) * Functions.Factorial(numberN));
             Console.WriteLine("{0:0}", sum);
         }
     }

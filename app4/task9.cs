@@ -24,15 +24,15 @@ namespace task9
             int br = 0;
             for (int i = 1; i <= numberN; i++)
             {
-                output += (i+br).ToString() + " ";
+                output += (i + br).ToString() + " ";
 
-                if(i == numberN)
+                if (i == numberN)
                 {
                     i -= numberN;
                     output += "\n";
-                    br ++;  
+                    br++;
                 }
-                
+
                 if (br == numberN)
                 {
                     break;
