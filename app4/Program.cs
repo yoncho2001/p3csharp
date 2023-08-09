@@ -58,10 +58,16 @@ namespace MainNS
                     task13.DecimalToHex.Result();
                     break;
                 case "task 14":
-                   // task14.OddAndEvenProduct.Result();
+                    task14.HexToDecimal.Result();
                     break;
                 case "task 15":
-                   // task15.OddAndEvenProduct.Result();
+                    task15.GCD.Result();
+                    break;
+                case "task 16":
+                    task16.Trailing0InN.Result();
+                    break;
+                case "task 17":
+                    task17.SpiralMatrix.Result();
                     break;
                 default:
                     Console.WriteLine("Incorrect input");
