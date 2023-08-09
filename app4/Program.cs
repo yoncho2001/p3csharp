@@ -45,6 +45,24 @@ namespace MainNS
                 case "task 9":
                     task9.MatrixOfNumbers.Result();
                     break;
+                case "task 10":
+                    task10.OddAndEvenProduct.Result();
+                    break;
+                case "task 11":
+                    task11.BinaryToDecimal.Result();
+                    break;
+                case "task 12":
+                    task12.DecimalToBinary.Result();
+                    break;
+                case "task 13":
+                    task13.DecimalToHex.Result();
+                    break;
+                case "task 14":
+                   // task14.OddAndEvenProduct.Result();
+                    break;
+                case "task 15":
+                   // task15.OddAndEvenProduct.Result();
+                    break;
                 default:
                     Console.WriteLine("Incorrect input");
                     break;
