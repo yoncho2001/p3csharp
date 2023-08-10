@@ -17,6 +17,17 @@ namespace functions
             return arr;
         }
 
+        public static char[] CrateTheAlphabet()
+        {
+            char[] arr = new char[26];
+
+            for (int i = 0; i < 26; i++)
+            {
+                arr[i] += (char)('a' + i);
+            }
+            return arr;
+        }
+
         public static int CanInt()
         {
             if (!int.TryParse(Console.ReadLine(), out int temp))

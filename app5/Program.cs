@@ -52,10 +52,10 @@ namespace MainNS
                     task11.BinarySearch.Result();
                     break;
                 case "task 12":
-                    //task12.DecimalToBinary.Result();
+                    task12.IndexOfLetters.Result();
                     break;
                 case "task 13":
-                    //task13.DecimalToHex.Result();
+                    task13.MergeSort.Result();
                     break;
                 case "task 14":
                     //task14.HexToDecimal.Result();
