@@ -58,13 +58,13 @@ namespace MainNS
                     task13.MergeSort.Result();
                     break;
                 case "task 14":
-                    //task14.HexToDecimal.Result();
+                    task14.QuickSort.Result();
                     break;
                 case "task 15":
-                    //task15.GCD.Result();
+                    task15.PrimeNumbers.Result();
                     break;
                 case "task 16":
-                    //task16.Trailing0InN.Result();
+                    task16.RemoveElementsFromArray.Result();
                     break;
                 default:
                     Console.WriteLine("Incorrect input");

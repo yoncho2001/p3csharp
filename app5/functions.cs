@@ -28,6 +28,17 @@ namespace functions
             return arr;
         }
 
+        public static int[] CrateNNuberArr(int size)
+        {
+            int[] arr = new int[size];
+
+            for (int i = 0; i < size; i++)
+            {
+                arr[i] = i + 1;
+            }
+            return arr;
+        }
+
         public static int CanInt()
         {
             if (!int.TryParse(Console.ReadLine(), out int temp))

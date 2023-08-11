@@ -7,12 +7,10 @@ namespace task13
         public static void Result()
         {
             int numberN = Functions.CanInt();
-            int indexMin = 0;
             string output = "";
             int[] elementsArr = Functions.InsertIntArr(numberN);
 
-            MergeSort sorted = new MergeSort();
-            sorted.sort(elementsArr, 0, elementsArr.Length - 1);
+            Sort(elementsArr, 0, elementsArr.Length - 1);
 
             for (int i = 0; i < elementsArr.Length; i++)
             {
@@ -22,7 +20,7 @@ namespace task13
             Console.WriteLine(output);
         }
 
-        void merge(int[] arr, int left, int midle, int right)
+        public static void Merge(int[] arr, int left, int midle, int right)
         {
             int sizeOfLeft = midle - left + 1;
             int sizeOfRight = right - midle;
@@ -71,16 +69,16 @@ namespace task13
             }
         }
 
-        void sort(int[] arr, int left, int right)
+        public static void Sort(int[] arr, int left, int right)
         {
             if (left < right)
             {
                 int midle = left + (right - left) / 2;
 
-                sort(arr, left, midle);
-                sort(arr, midle + 1, right);
+                Sort(arr, left, midle);
+                Sort(arr, midle + 1, right);
 
-                merge(arr, left, midle, right);
+                Merge(arr, left, midle, right);
             }
         }
     }
