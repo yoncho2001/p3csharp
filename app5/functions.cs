@@ -14,6 +14,7 @@ namespace functions
                     return arr = new int[size];
                 }
             }
+
             return arr;
         }
 
@@ -25,6 +26,7 @@ namespace functions
             {
                 arr[i] += (char)('a' + i);
             }
+
             return arr;
         }
 
@@ -36,6 +38,7 @@ namespace functions
             {
                 arr[i] = i + 1;
             }
+
             return arr;
         }
 
@@ -46,6 +49,7 @@ namespace functions
                 Console.WriteLine("Incorrect input");
                 return 0;
             }
+
             return temp;
         }
 
@@ -56,6 +60,7 @@ namespace functions
                 Console.WriteLine("Incorrect input");
                 return 0;
             }
+            
             return temp;
         }
     }
