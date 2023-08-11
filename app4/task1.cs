@@ -15,12 +15,7 @@ namespace task1
 
             for (int i = 1; i <= number; i++)
             {
-                output += i.ToString();
-
-                if (i + 1 <= number)
-                {
-                    output += ", ";
-                }
+               output += i.ToString() + (i < number ? ", " : "");
             }
 
             Console.WriteLine(output);

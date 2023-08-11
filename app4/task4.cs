@@ -13,14 +13,13 @@ namespace task4
                 Console.WriteLine("incorect");
             }
 
-            for (int i = 0; i <= cards.Length; i++)
+            int index = 0;
+            while (cards[index] != input)
             {
-                if (cards[i] == input)
-                {
-                    break;
-                }
-                output += cards[i] + " of spades, " + cards[i] + " of clubs, " + cards[i] + " of hearts, " + cards[i] + " of diamonds\n";
+                output += cards[index] + " of spades, " + cards[index] + " of clubs, " + cards[index] + " of hearts, " + cards[index] + " of diamonds\n";
+                index++;
             }
+
             output += input + " of spades, " + input + " of clubs, " + input + " of hearts, " + input + " of diamonds\n";
             Console.WriteLine(output);
         }

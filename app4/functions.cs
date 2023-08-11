@@ -10,6 +10,7 @@ namespace functions
             {
                 factorial = factorial * i;
             }
+            
             return factorial;
         }
 
@@ -21,6 +22,7 @@ namespace functions
             {
                 factorial = factorial * i;
             }
+
             return factorial;
         }
 
@@ -28,6 +30,7 @@ namespace functions
         {
             char[] charInput = input.ToCharArray();
             Array.Reverse(charInput);
+            
             return new string(charInput);
         }
 

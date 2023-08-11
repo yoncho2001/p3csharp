@@ -6,19 +6,19 @@ namespace task12
     {
         public static void Result()
         {
-            int numberDEcimal;
+            int numberDecimal;
             string output = "";
 
-            if (!int.TryParse(Console.ReadLine(), out numberDEcimal))
+            if (!int.TryParse(Console.ReadLine(), out numberDecimal))
             {
                 Console.WriteLine("Incorrect input");
                 return;
             }
 
-            while (numberDEcimal > 0)
+            while (numberDecimal > 0)
             {
-                output += numberDEcimal % 2 == 1 ? "1" : "0";
-                numberDEcimal /= 2;
+                output += numberDecimal % 2 == 1 ? "1" : "0";
+                numberDecimal /= 2;
             }
             Console.WriteLine(Functions.Reverse(output));
         }

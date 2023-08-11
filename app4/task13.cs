@@ -6,18 +6,18 @@ namespace task13
     {
         public static void Result()
         {
-            long numberDEcimal;
+            long numberDecimal;
             string output = "";
 
-            if (!long.TryParse(Console.ReadLine(), out numberDEcimal))
+            if (!long.TryParse(Console.ReadLine(), out numberDecimal))
             {
                 Console.WriteLine("Incorrect input");
                 return;
             }
 
-            while (numberDEcimal > 0)
+            while (numberDecimal > 0)
             {
-                switch (numberDEcimal % 16)
+                switch (numberDecimal % 16)
                 {
                     case 1:
                         output += "1";
@@ -65,7 +65,7 @@ namespace task13
                         output = "F";
                         break;
                 }
-                numberDEcimal /= 16;
+                numberDecimal /= 16;
             }
             Console.WriteLine(Functions.Reverse(output));
         }
