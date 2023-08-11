@@ -4,13 +4,8 @@ using task2;
 using task3;
 using task4;
 using task5;
-using task6;
 using task7;
 using task8;
-using task9;
-using task10;
-using task11;
-using task12;
 
 namespace MainNS
 {
@@ -29,32 +24,29 @@ namespace MainNS
 
             switch (tasks)
             {
-                case "task 6":
-                    task6.FourDigits.Result();
+                case "task 1":
+                    task1.ExchangeNumbers.Result();
+                    break;
+                case "task 2":
+                    task2.BonusScore.Result();
+                    break;
+                case "task 3":
+                    task3.PlayCard.Result();
+                    break;
+                case "task 4":
+                    task4.MultiplicationSign.Result();
+                    break;
+                case "task 5":
+                    task5.BiggestOfFive.Result();
                     break;
                 case "task 7":
-                    task7.PointInCircle.Result();
+                    task7.SortThreeNumbers.Result();
                     break;
                 case "task 8":
-                    task8.PrimeCheck.Result();
+                    task8.DigitAsWord.Result();
                     break;
                 case "task 9":
-                    task9.Trapezoids.Result();
-                    break;
-                case "task 10":
-                    task10.PointCircleRectangle.Result();
-                    break;
-                case "task 11":
-                    task11.ThirdrdBit.Result();
-                    break;
-                case "task 12":
-                    task12.NthBit.Result();
-                    break;
-                case "task 13":
-                    task13.ModifyBit.Result();
-                    break;
-                case "task 14":
-                    task14.BitSwap.Result();
+                    task9.IntDoubleString.Result();
                     break;
                 default:
                     Console.WriteLine("Incorrect input");
