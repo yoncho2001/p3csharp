@@ -21,19 +21,20 @@ namespace task9
                 }
                 output += "\n";
             }*/
-            int br = 0;
+
+            int counter = 0;
             for (int i = 1; i <= numberN; i++)
             {
-                output += (i + br).ToString() + " ";
+                output += (i + counter).ToString() + " ";
 
                 if (i == numberN)
                 {
                     i -= numberN;
                     output += "\n";
-                    br++;
+                    counter++;
                 }
 
-                if (br == numberN)
+                if (counter == numberN)
                 {
                     break;
                 }

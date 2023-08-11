@@ -15,7 +15,7 @@ namespace task10
                 return;
             }
 
-            Console.WriteLine("Insert the numbers whit spase bar");
+            Console.WriteLine("Insert the numbers whit spacebar");
             string insert = Console.ReadLine();
             string[] tokens = insert.Split(" ");
             int[] numbers = new int[numberN];
