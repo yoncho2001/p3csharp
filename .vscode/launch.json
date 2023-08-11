@@ -10,6 +10,7 @@
             "request": "launch",
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
+
             "program": "${workspaceFolder}/app3/bin/Debug/net7.0/app3.dll",
             "args": [],
             "cwd": "${workspaceFolder}/app3",
