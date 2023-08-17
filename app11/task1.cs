@@ -8,7 +8,7 @@ namespace task1
         {
             int numberN = Functions.CanInt();
             string character = Console.ReadLine();
-            int[,] elementsArr = new int[numberN,numberN];
+            int[,] elementsArr = new int[numberN, numberN];
             int count = 1;
 
             switch (character)
@@ -38,47 +38,69 @@ namespace task1
                         {
                             if (i % 2 == 0)
                             {
-                                elementsArr[j,i] = count;
+                                elementsArr[j, i] = count;
                                 count++;
                             }
                             else
                             {
-                                elementsArr[numberN - j - 1,i] = count;
+                                elementsArr[numberN - j - 1, i] = count;
                                 count++;
                             }
                         }
                     }
                     break;
                 case "c":
-                    // task3.Circle.Result();
+                    for (int i = numberN - 1; i >= 0; i--)
+                    {
+                        int indexCount = 0;
+
+                        for (int j = 0; j < numberN - i; j++)
+                        {
+                            elementsArr[i + indexCount, j] = count;
+                            count++;
+                            indexCount++;
+                        }
+                    }
+                    for (int i = 0; i < numberN - 1; i++)
+                    {
+                        int indexCount = 0;
+
+                        for (int j = 1 + i; j <= numberN - 1; j++)
+                        {
+                            elementsArr[indexCount, j] = count;
+                            count++;
+                            indexCount++;
+                        }
+                    }
                     break;
                 case "d":
-                    int columnBeginning = 0;
-                    int columnEnd = numberN - 1;
+                    int beginning = 0;
+                    int end = numberN - 1;
 
                     while (count <= numberN * numberN)
                     {
-                        for (int i = columnBeginning; i <= columnEnd; i++)
+                        for (int i = beginning; i <= end; i++)
                         {
-                            elementsArr[columnBeginning, i] = count++;
+                            elementsArr[i, beginning] = count++;
                         }
 
-                        for (int i = columnBeginning + 1; i <= columnEnd; i++)
+                        for (int i = beginning + 1; i <= end; i++)
                         {
-                            elementsArr[i, columnEnd] = count++;
+                            elementsArr[end, i] = count++;
                         }
 
-                        for (int i = columnEnd - 1; i >= columnBeginning; i--)
+                        for (int i = end - 1; i >= beginning; i--)
                         {
-                            elementsArr[columnEnd, i] = count++;
+                            elementsArr[i, end] = count++;
                         }
 
-                        for (int i = columnEnd - 1; i >= columnBeginning + 1; i--)
+                        for (int i = end - 1; i >= beginning + 1; i--)
                         {
-                            elementsArr[i, columnBeginning] = count++;
+                            elementsArr[beginning, i] = count++;
                         }
-                        columnBeginning++;
-                        columnEnd--;
+                        
+                        beginning++;
+                        end--;
                     }
                     break;
                 default:

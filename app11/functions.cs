@@ -18,6 +18,23 @@ namespace functions
             return arr;
         }
 
+        public static string[] InsertStringArr(int size)
+        {
+            string[] arr = new string[size];
+
+            for (int i = 0; i < size; i++)
+            {
+                arr[i] = Console.ReadLine();
+                if (arr[i] == null)
+                {
+                    Console.WriteLine("Incorrect input");
+                    return arr = new string[size];
+                }
+            }
+
+            return arr;
+        }
+
         public static int CanInt()
         {
             if (!int.TryParse(Console.ReadLine(), out int temp))
