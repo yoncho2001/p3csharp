@@ -51,22 +51,22 @@ namespace MainNS
                     task12.ParseURL.Result();
                     break;
                 case "task 13":
-                    //task13.LargestAreaInMatrix.Result();
+                    task13.ReverseSentence.Result();
                     break;
                 case "task 14":
-                    //task14.LargestAreaInMatrix.Result();
+                    task14.WordDictionary.Result();
                     break;
                 case "task 15":
-                    //task15.FillTheMatrix.Result();
+                    task15.ReplaceTags.Result();
                     break;
                 case "task 16":
-                    //task16.MaximalSum.Result();
+                    task16.DateDifference.Result();
                     break;
                 case "task 17":
-                    //task17.SequenceInMatrix.Result();
+                    task17.DateInBulgarian.Result();
                     break;
                 case "task 18":
-                    //task18.BinarySearch.Result();
+                    task18.ExtractEmails.Result();
                     break;
                 case "task 19":
                     //task19.SortByStringLength.Result();

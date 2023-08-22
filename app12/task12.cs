@@ -11,7 +11,7 @@ namespace task12
             string output = "";
 
             int protocolEnd = inputURL.IndexOf("://");
-            
+
             if (protocolEnd < 0)
             {
                 Console.WriteLine("Invalid URL!");
@@ -19,7 +19,7 @@ namespace task12
             }
 
             string protocol = inputURL.Substring(0, protocolEnd);
-           output += "[protocol] = " + protocol + "\n";
+            output += "[protocol] = " + protocol + "\n";
 
             int serverStart = protocolEnd + 3;
             int serverEnd = inputURL.IndexOf('/', serverStart);
@@ -29,7 +29,7 @@ namespace task12
 
             string resource = inputURL.Substring(serverEnd);
             output += "[resource] = " + resource;
-            
+
             Console.WriteLine(output);
         }
     }
