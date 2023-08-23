@@ -1,5 +1,4 @@
 using functions;
-using System.Text;
 
 namespace task14
 {

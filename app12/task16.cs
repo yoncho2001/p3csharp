@@ -1,5 +1,4 @@
 using functions;
-using System.Text;
 using System.Globalization;
 
 namespace task16

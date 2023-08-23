@@ -1,3 +1,5 @@
+using System.Text;
+
 namespace functions
 {
     public class Functions
@@ -71,5 +73,17 @@ namespace functions
 
             Console.WriteLine(output);
         }
+
+        public static string ReverceStr(string word)
+        {
+            StringBuilder reverse = new StringBuilder();
+            for (int i = word.Length - 1; i >= 0; i--)
+                {
+                    reverse.Append(word[i]);
+                }
+
+            return reverse.ToString();
+        }
+
     }
 }

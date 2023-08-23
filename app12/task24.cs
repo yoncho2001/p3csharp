@@ -1,8 +1,8 @@
 using functions;
 
-namespace task15
+namespace task24
 {
-    public class ReplaceTags
+    public class OrderWords
     {
         public static void Result()
         {
@@ -15,11 +15,16 @@ namespace task15
                 return;
             }
 
-            input = input.Replace("<a href=\"", "[URL=");
-            input = input.Replace("\">", "]");
+            string[] elements = input.Split(" ");
 
-            input = input.Replace("</a>", "[/URL]");
-            Console.WriteLine(input);
+            Array.Sort(elements);
+
+            for (int i = 0; i < elements.Length; i++)
+            {
+                output += elements[i] + "\n";
+            }
+
+            Console.WriteLine(output);
         }
     }
 }

@@ -69,22 +69,25 @@ namespace MainNS
                     task18.ExtractEmails.Result();
                     break;
                 case "task 19":
-                    //task19.SortByStringLength.Result();
+                    task19.DatesFromTextInCanada.Result();
                     break;
                 case "task 20":
-                    //task20.LargestAreaInMatrix.Result();
+                    task20.Palindromes.Result();
                     break;
                 case "task 21":
-                    //task21.LargestAreaInMatrix.Result();
+                    task21.LettersCount.Result();
                     break;
                 case "task 22":
-                    //task23.FillTheMatrix.Result();
+                    task22.WordsCount.Result();
+                    break;
+                case "task 23":
+                    task23.SeriesOfLetters.Result();
                     break;
                 case "task 24":
-                    //task24.MaximalSum.Result();
+                    task24.OrderWords.Result();
                     break;
                 case "task 25":
-                    //task25.SequenceInMatrix.Result();
+                    task25.ExtractTextFromHTML.Result();
                     break;
                 default:
                     Console.WriteLine("Incorrect input");

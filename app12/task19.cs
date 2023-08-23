@@ -1,9 +1,10 @@
 using functions;
+using System.Globalization;
 using System.Text.RegularExpressions;
 
-namespace task18
+namespace task19
 {
-    public class ExtractEmails
+    public class DatesFromTextInCanada
     {
         public static void Result()
         {
@@ -16,14 +17,20 @@ namespace task18
                 return;
             }
 
-            string pattern = @"[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}";
+            string pattern = @"[0-9]{2,}\.[0-9]{2,}\.[0-9]{4}";
 
             Match matches = Regex.Match(input, pattern);
-            Console.WriteLine("Found emails:");
+            Console.WriteLine("Found dates:");
+
+            var canadianCult = CultureInfo.CreateSpecificCulture("en-CA");
 
             while (matches.Success)
             {
-                output += matches.Value + "\n";
+                if (DateTime.TryParseExact(matches.Value, "dd.MM.yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime parsedDate))
+                {
+                    output += parsedDate.ToString("d", canadianCult) + "\n";
+                }
+
                 matches = matches.NextMatch();
             }
 
