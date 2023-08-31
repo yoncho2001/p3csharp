@@ -29,9 +29,7 @@ namespace task4
             using (WebClient client = new WebClient())
             {
                 client.DownloadFile(path, "image" + extension.Result);
-            }
-
-           
+            }           
         }
 
         public async Task<String> GetFileExtention(string url)
