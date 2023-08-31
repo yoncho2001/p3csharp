@@ -1,0 +1,7 @@
+0. 5
+1. One more way to read a text
+2. 
+3. file is using a StreamReader class
+4. that implements a TextReader and reads characters
+5. from a byte stream in a particular encoding. The ReadLine
+6. method of StreamReader reads one line at a time.
