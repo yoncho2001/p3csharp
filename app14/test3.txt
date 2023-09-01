@@ -1,0 +1,5 @@
+Key: file, Value: 3
+Key: txt, Value: 3
+Key: words, Value: 4
+Key: in, Value: 4
+Key: a, Value: 2
