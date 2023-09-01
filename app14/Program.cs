@@ -45,16 +45,16 @@ namespace MainNS
                     task9.DeleteOddLines.Result();
                     break;
                 case "task 10":
-                  //  task10.ConcatenateTextFiles.Result();
+                    task10.ExtractTextFromXML.Result();
                     break;    
                 case "task 11":
-                  //  task11.LineNumbers.Result();
+                    task11.PrefixTest.Result();
                     break;
                 case "task 12":
-                  //  task12.CompareTextFiles.Result();
+                    task12.RemoveWords.Result();
                     break;
                 case "task 13":
-                  //  task13.CompareTextFiles.Result();
+                    task13.CountWords.Result();
                     break;
                 default:
                     Console.WriteLine("Incorrect input");
