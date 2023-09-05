@@ -1,6 +1,7 @@
 ﻿using System;
 using task6;
 
+
 namespace MainNS
 {
     static class Program
@@ -19,19 +20,19 @@ namespace MainNS
             switch (tasks)
             {
                 case "task 1":
-                    //task1.FillTheMatrix.Result();
+                    task1.FillTheMatrix.Result();
                     break;
                 case "task 2":
-                    //task2.MaximalSum.Result();
+                    task2.MaximalSum.Result();
                     break;
                 case "task 3":
-                    //task3.SequenceInMatrix.Result();
+                    task3.SequenceInMatrix.Result();
                     break;
                 case "task 4":
                     task4.BinarySearch.Result();
                     break;
                 case "task 5":
-                    //task5.SortByStringLength.Result();
+                    task5.SortByStringLength.Result();
                     break;
                 case "task 6":
                     Matrix m1 = new Matrix(2, 2, true);
