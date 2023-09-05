@@ -1,0 +1,94 @@
+using System;
+using task1;
+
+namespace MainNS
+{
+    static class Program
+    {
+        static void Main()
+        {
+            Console.WriteLine("Input the task: ");
+            string? tasks = Console.ReadLine();
+
+            if (string.IsNullOrEmpty(tasks))
+            {
+                Console.WriteLine("Incorrect input");
+                return;
+            }
+
+            switch (tasks)
+            {   
+                case "task 1":
+                    task1.FourDigits.Result();
+                    break;
+                
+                default:
+                    Console.WriteLine("Incorrect input");
+                    break;
+            }
+        }
+    }
+}
+
+
+
+
+namespace task1
+{
+    public class FourDigits
+    {
+        public static void Result()
+        {
+            string? number = Console.ReadLine();
+
+            if (string.IsNullOrEmpty(number))
+            {
+                Console.WriteLine("Incorrect input");
+                return;
+            }
+
+            int a = number[0] - '0';
+            int b = number[1] - '0';
+            int c = number[2] - '0';
+            int d = number[3] - '0';
+            string output = Convert.ToString(a + b + c + d) + "\n"
+                        + number[3] + number[2] + number[1] + number[0] + "\n"
+                        + number[3] + number[0] + number[1] + number[2] + "\n"
+                        + number[0] + number[2] + number[1] + number[3];
+            Console.WriteLine(output);
+        }
+    }
+}
+
+namespace task10
+{
+    public class Interval
+    {
+        public static void Result()
+        {
+            int number1;
+            int number2;
+            int count = 0;
+
+            if (!int.TryParse(Console.ReadLine(), out number1)
+                || !int.TryParse(Console.ReadLine(), out number2))
+            {
+                Console.WriteLine("Incorrect input");
+                return;
+            }
+            
+            int max = Math.Max(number1, number2);
+            int min = Math.Min(number1, number2);
+
+            for (int i = min+1; i < max; i++)
+            {
+                if (i % 5 == 0)
+                {
+                    count += 1;
+                }
+            }
+
+            Console.WriteLine(count);
+        }
+    }
+}
