@@ -7,7 +7,7 @@ namespace task15
         public static void Result()
         {
             int numberN = Functions.CanInt();
-            int[] elementsArray = Functions.CrateNNuberArray(numberN);
+            int[] elementsArray = Functions.CreateNNuberArray(numberN);
             int[] primeArray = new int[0];
             bool isprime = true;
 

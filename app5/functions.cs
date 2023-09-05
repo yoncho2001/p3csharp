@@ -30,7 +30,7 @@ namespace functions
             return array;
         }
 
-        public static int[] CrateNNuberArray(int size)
+        public static int[] CreateNNuberArray(int size)
         {
             int[] array = new int[size];
 

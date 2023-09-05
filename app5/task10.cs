@@ -23,7 +23,7 @@ namespace task10
                     if (currentSum == sumToFind)
                     {
                         output += "\n";
-                        output += printSubArray(elementsArray, int i, int j);
+                        output += printSubArray(elementsArray, i, j);
                         foundSubset = true;
                     }
                     
@@ -44,7 +44,7 @@ namespace task10
 
             for (int i = start; i <= end; i++)
             {
-                output += elementsArray[k].ToString() + "\n";
+                output += array[i].ToString() + "\n";
             }
             return output;
         }
