@@ -7,15 +7,15 @@ namespace task15
         public static void Result()
         {
             int numberN = Functions.CanInt();
-            int[] elementsArr = Functions.CrateNNuberArr(numberN);
-            int[] primeArr = new int[0];
+            int[] elementsArray = Functions.CrateNNuberArray(numberN);
+            int[] primeArray = new int[0];
             bool isprime = true;
 
-            for (int i = 1; i < elementsArr.Length; i++)
+            for (int i = 1; i < elementsArray.Length; i++)
             {
-                for (int j = 0; j < primeArr.Length; j++)
+                for (int j = 0; j < primeArray.Length; j++)
                 {
-                    if (elementsArr[i] % primeArr[j] == 0)
+                    if (elementsArray[i] % primeArray[j] == 0)
                     {
                         isprime = false;
                     }
@@ -23,13 +23,13 @@ namespace task15
 
                 if (isprime)
                 {
-                    primeArr = primeArr.Append(elementsArr[i]).ToArray();
+                    primeArray = primeArray.Append(elementsArray[i]).ToArray();
                 }
 
                 isprime = true;
             }
 
-            Console.WriteLine(primeArr[primeArr.Length - 1]);
+            Console.WriteLine(primeArray[primeArray.Length - 1]);
         }
     }
 }

@@ -8,13 +8,13 @@ namespace task14
         {
             int numberN = Functions.CanInt();
             string output = "";
-            int[] elementsArr = Functions.InsertIntArr(numberN);
+            int[] elementsArray = Functions.InsertIntArray(numberN);
 
-            QuickSortFunction(elementsArr, 0, elementsArr.Length - 1);
+            QuickSortFunction(elementsArray, 0, elementsArray.Length - 1);
 
-            for (int i = 0; i < elementsArr.Length; i++)
+            for (int i = 0; i < elementsArray.Length; i++)
             {
-                output += elementsArr[i].ToString() + "\n";
+                output += elementsArray[i].ToString() + "\n";
             }
 
             Console.WriteLine(output);
@@ -43,14 +43,14 @@ namespace task14
             return index + 1;
         }
 
-        public static void QuickSortFunction(int[] arr, int left, int right)
+        public static void QuickSortFunction(int[] array, int left, int right)
         {
             if (left < right)
             {
-                int sortedElementIndex = SortElement(arr, left, right);
+                int sortedElementIndex = SortElement(array, left, right);
 
-                QuickSortFunction(arr, left, sortedElementIndex - 1);
-                QuickSortFunction(arr, sortedElementIndex + 1, right);
+                QuickSortFunction(array, left, sortedElementIndex - 1);
+                QuickSortFunction(array, sortedElementIndex + 1, right);
             }
         }
 

@@ -7,19 +7,19 @@ namespace task9
         public static void Result()
         {
             int numberN = Functions.CanInt();
-            int[] elementsArr = Functions.InsertIntArr(numberN);
+            int[] elementsArray = Functions.InsertIntArray(numberN);
 
             Dictionary <int, int> newPairs = new Dictionary<int, int>();
             
-            for (int i = 0; i < elementsArr.Length; i++)
+            for (int i = 0; i < elementsArray.Length; i++)
             {
-                if (newPairs.ContainsKey(elementsArr[i]))
+                if (newPairs.ContainsKey(elementsArray[i]))
                 {
-                    newPairs[elementsArr[i]] ++;
+                    newPairs[elementsArray[i]] ++;
                 }
                 else
                 {
-                    newPairs.Add(elementsArr[i], 1);
+                    newPairs.Add(elementsArray[i], 1);
                 }
             }
 

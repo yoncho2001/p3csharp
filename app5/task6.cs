@@ -11,13 +11,13 @@ namespace task6
             int kSum = 0;
             int maxkSum = 0;
 
-            int[] elementsArr = Functions.InsertIntArr(numberN);
+            int[] elementsArray = Functions.InsertIntArray(numberN);
 
-            for (int i = 0; i <= elementsArr.Length - numberK; i++)
+            for (int i = 0; i <= elementsArray.Length - numberK; i++)
             {
                 for (int j = 0; j < numberK; j++)
                 {
-                    kSum += elementsArr[i + j];
+                    kSum += elementsArray[i + j];
                 }
 
                 maxkSum = maxkSum < kSum ? kSum : maxkSum;

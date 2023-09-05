@@ -7,14 +7,14 @@ namespace task8
         public static void Result()
         {
             int numberN = Functions.CanInt();
-            int[] elementsArr = Functions.InsertIntArr(numberN);
+            int[] elementsArray = Functions.InsertIntArray(numberN);
 
-            int maxSum = elementsArr[0];
+            int maxSum = elementsArray[0];
             int currentSum = 0;
 
-            foreach (int element in elementsArr)
+            for (int i = 0; i < elementsArray.Length; i++)
             {
-                currentSum = Math.Max(element, currentSum + element);
+                currentSum = Math.Max(elementsArray[i], currentSum + elementsArray[i]);
                 maxSum = Math.Max(maxSum, currentSum);
             }
 

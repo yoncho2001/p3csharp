@@ -11,44 +11,39 @@ namespace task3
             string secondS = Console.ReadLine();
             int size;
             bool isEqual = true;
-            bool isFirstBiger = true;
 
-            if (firstS.Length != secondS.Length)
-            {
-                size = firstS.Length < secondS.Length ? firstS.Length : secondS.Length;
-            }
-            else
-            {
-                size = secondS.Length;
-            }
+            size = firstS.Length <= secondS.Length ? firstS.Length : secondS.Length;
 
             for (int i = 0; i < size; i++)
             {
-                if (firstS[i] != secondS[i])
+                if (firstS[i] < secondS[i])
                 {
+                    output = "<";
                     isEqual = false;
-                    isFirstBiger = firstS[i] > secondS[i];
+                    break;
+                }
+                else if (firstS[i] > secondS[i])
+                {
+                    secondS = ">";
+                    isEqual = false;
                     break;
                 }
             }
 
             if (isEqual)
             {
-                if (size == firstS.Length && size == secondS.Length)
+                if (firstS.Length != secondS.Length)
                 {
-                    output = "=";
+                    output = firstS.Length < secondS.Length ? "<" : ">";
                 }
                 else
                 {
-                    output = isFirstBiger ? "<" : ">";
+                   output = "=";
                 }
-            }
-            else
-            {
-                output = isFirstBiger ? ">" : "<";
             }
 
             Console.WriteLine(output);
+
         }
     }
 }

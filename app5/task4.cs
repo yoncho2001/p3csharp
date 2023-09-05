@@ -11,18 +11,18 @@ namespace task4
             int maxEqualLength = 0;
             int savedInt;
 
-            int[] elementsArr = Functions.InsertIntArr(numberN);
-            savedInt = elementsArr[0];
+            int[] elementsArray = Functions.InsertIntArray(numberN);
+            savedInt = elementsArray[0];
 
-            for (int i = 1; i < elementsArr.Length; i++)
+            for (int i = 1; i < elementsArray.Length; i++)
             {
-                if (savedInt == elementsArr[i])
+                if (savedInt == elementsArray[i])
                 {
                     equalLength++;
                 }
                 else
                 {
-                    savedInt = elementsArr[i];
+                    savedInt = elementsArray[i];
                     maxEqualLength = maxEqualLength < equalLength ? equalLength : maxEqualLength;
                     equalLength = 1;
                 }

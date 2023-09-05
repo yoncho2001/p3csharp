@@ -2,66 +2,84 @@ namespace functions
 {
     public class Functions
     {
-        public static int[] InsertIntArr(int size)
+        public static int[] InsertIntArray(int size)
         {
-            int[] arr = new int[size];
+            int[] array = new int[size];
 
             for (int i = 0; i < size; i++)
             {
-                if (!int.TryParse(Console.ReadLine(), out arr[i]))
+                if (!int.TryParse(Console.ReadLine(), out array[i]))
                 {
                     Console.WriteLine("Incorrect input");
-                    return arr = new int[size];
+                    return array = new int[size];
                 }
             }
 
-            return arr;
+            return array;
         }
 
-        public static char[] CrateTheAlphabet()
+        public static char[] CreateTheAlphabet()
         {
-            char[] arr = new char[26];
+            char[] array = new char[26];
 
             for (int i = 0; i < 26; i++)
             {
-                arr[i] += (char)('a' + i);
+                array[i] += (char)('a' + i);
             }
 
-            return arr;
+            return array;
         }
 
-        public static int[] CrateNNuberArr(int size)
+        public static int[] CrateNNuberArray(int size)
         {
-            int[] arr = new int[size];
+            int[] array = new int[size];
 
             for (int i = 0; i < size; i++)
             {
-                arr[i] = i + 1;
+                array[i] = i + 1;
             }
 
-            return arr;
+            return array;
         }
 
-        public static int CanInt()
+         public static int CanInt()
         {
-            if (!int.TryParse(Console.ReadLine(), out int temp))
+            int input;
+
+            try
             {
-                Console.WriteLine("Incorrect input");
-                return 0;
+                input = int.Parse(Console.ReadLine());
+            }
+            catch (ArgumentNullException)
+            {
+                throw new ArgumentNullException("Null input is not allowed");
+            }
+            catch (OverflowException)
+            {
+                throw new OverflowException("Number is too large or too small");
             }
 
-            return temp;
+            return input;
         }
 
         public static double CanDouble()
         {
-            if (!double.TryParse(Console.ReadLine(), out double temp))
+            double input;
+
+            try
             {
-                Console.WriteLine("Incorrect input");
-                return 0;
+                input = double.Parse(Console.ReadLine());
             }
-            
-            return temp;
+            catch (ArgumentNullException)
+            {
+                throw new ArgumentNullException("Null input is not allowed");
+            }
+            catch (OverflowException)
+            {
+                throw new OverflowException("Number is too large or too small");
+            }
+
+            return input;
         }
     }
 }

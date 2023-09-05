@@ -10,25 +10,24 @@ namespace task10
             int sumToFind = Functions.CanInt();
             string output = "";
 
-            int[] elementsArr = Functions.InsertIntArr(numberN);
+            int[] elementsArray = Functions.InsertIntArray(numberN);
             bool foundSubset = false;
             int currentSum = 0;
 
-            for (int i = 0; i < elementsArr.Length; i++)
+            for (int i = 0; i < elementsArray.Length; i++)
             {
-                for (int j = i; j < elementsArr.Length; j++)
+                for (int j = i; j < elementsArray.Length; j++)
                 {
-                    currentSum += elementsArr[j];
+                    currentSum += elementsArray[j];
 
                     if (currentSum == sumToFind)
                     {
-                        for (int k = i; k <= j; k++)
-                        {
-                            output += elementsArr[k].ToString() + "\n";
-                        }
+                        output += "\n";
+                        output += printSubArray(elementsArray, int i, int j);
                         foundSubset = true;
                     }
-                    else if (currentSum > sumToFind)
+                    
+                    if (currentSum > sumToFind)
                     {
                         break;
                     }
@@ -37,6 +36,17 @@ namespace task10
             }
 
             Console.WriteLine(foundSubset ? output : "No Subset Adds To Sum");
+        }
+
+        public static string printSubArray(int[] array, int start, int end)
+        {
+            string output = "";
+
+            for (int i = start; i <= end; i++)
+            {
+                output += elementsArray[k].ToString() + "\n";
+            }
+            return output;
         }
     }
 }

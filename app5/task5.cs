@@ -11,19 +11,19 @@ namespace task5
             int maxIncreasingLength = 0;
             int savedInt;
 
-            int[] elementsArr =  Functions.InsertIntArr(numberN);
-            savedInt = elementsArr[0];
+            int[] elementsArray =  Functions.InsertIntArray(numberN);
+            savedInt = elementsArray[0];
 
-            for (int i = 1; i < elementsArr.Length; i++)
+            for (int i = 1; i < elementsArray.Length; i++)
             {
-                if (savedInt == elementsArr[i]-1)
+                if (savedInt == elementsArray[i]-1)
                 {
                     increasingLength++;
-                    savedInt = elementsArr[1];
+                    savedInt = elementsArray[1];
                 }
                 else
                 {
-                    savedInt = elementsArr[i];
+                    savedInt = elementsArray[i];
                     maxIncreasingLength = maxIncreasingLength < increasingLength? increasingLength : maxIncreasingLength ;
                     increasingLength = 1;
                 }

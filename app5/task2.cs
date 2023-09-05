@@ -8,13 +8,13 @@ namespace task2
         {
             int numberN = Functions.CanInt();
             string output = "";
-            int[] firstArr = Functions.InsertIntArr(numberN);
-            int[] secondArr = Functions.InsertIntArr(numberN);
+            int[] firstArray = Functions.InsertIntArray(numberN);
+            int[] secondArray = Functions.InsertIntArray(numberN);
             bool isEqual = true;
 
             for (int i = 0; i < numberN; i++)
             {
-                if (firstArr[i] != secondArr[i])
+                if (firstArray[i] != secondArray[i])
                 {
                     isEqual = false;
                 }

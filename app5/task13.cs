@@ -8,32 +8,36 @@ namespace task13
         {
             int numberN = Functions.CanInt();
             string output = "";
-            int[] elementsArr = Functions.InsertIntArr(numberN);
+            int[] elementsArray = Functions.InsertIntArray(numberN);
 
-            Sort(elementsArr, 0, elementsArr.Length - 1);
+            Sort(elementsArray, 0, elementsArray.Length - 1);
 
-            for (int i = 0; i < elementsArr.Length; i++)
+            for (int i = 0; i < elementsArray.Length; i++)
             {
-                output += elementsArr[i].ToString() + "\n";
+                output += elementsArray[i].ToString() + "\n";
             }
 
             Console.WriteLine(output);
         }
 
-        public static void Merge(int[] arr, int left, int midle, int right)
+        public static void Merge(int[] array, int left, int midle, int right)
         {
             int sizeOfLeft = midle - left + 1;
             int sizeOfRight = right - midle;
 
-            int[] leftArr = new int[sizeOfLeft];
-            int[] rightArr = new int[sizeOfRight];
+            int[] leftArray = new int[sizeOfLeft];
+            int[] rightArray = new int[sizeOfRight];
             int indexL, indexR;
 
             for (indexL = 0; indexL < sizeOfLeft; indexL++)
-                leftArr[indexL] = arr[left + indexL];
+            {
+                leftArray[indexL] = array[left + indexL];
+            }
 
             for (indexR = 0; indexR < sizeOfRight; indexR++)
-                rightArr[indexR] = arr[midle + 1 + indexR];
+            {
+                rightArray[indexR] = array[midle + 1 + indexR];
+            }
 
             indexL = 0;
             indexR = 0;
@@ -41,14 +45,14 @@ namespace task13
 
             while (indexL < sizeOfLeft && indexR < sizeOfRight)
             {
-                if (leftArr[indexL] <= rightArr[indexR])
+                if (leftArray[indexL] <= rightArray[indexR])
                 {
-                    arr[mergeIndex] = leftArr[indexL];
+                    array[mergeIndex] = leftArray[indexL];
                     indexL++;
                 }
                 else
                 {
-                    arr[mergeIndex] = rightArr[indexR];
+                    array[mergeIndex] = rightArray[indexR];
                     indexR++;
                 }
                 mergeIndex++;
@@ -56,29 +60,29 @@ namespace task13
 
             while (indexL < sizeOfLeft)
             {
-                arr[mergeIndex] = leftArr[indexL];
+                array[mergeIndex] = leftArray[indexL];
                 indexL++;
                 mergeIndex++;
             }
 
             while (indexR < sizeOfRight)
             {
-                arr[mergeIndex] = rightArr[indexR];
+                array[mergeIndex] = rightArray[indexR];
                 indexR++;
                 mergeIndex++;
             }
         }
 
-        public static void Sort(int[] arr, int left, int right)
+        public static void Sort(int[] array, int left, int right)
         {
             if (left < right)
             {
                 int midle = left + (right - left) / 2;
 
-                Sort(arr, left, midle);
-                Sort(arr, midle + 1, right);
+                Sort(array, left, midle);
+                Sort(array, midle + 1, right);
 
-                Merge(arr, left, midle, right);
+                Merge(array, left, midle, right);
             }
         }
     }

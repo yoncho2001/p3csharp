@@ -7,17 +7,16 @@ namespace task16
         public static void Result()
         {
             int numberN = Functions.CanInt();
-            int[] elementsArr = Functions.InsertIntArr(numberN);
+            int[] elementsArray = Functions.InsertIntArray(numberN);
+            int[] sortedElementsCounts = new int[elementsArray.Length];
 
-            int[] sortedElementsCounts = new int[elementsArr.Length];
-
-            for (int i = 0; i < elementsArr.Length; i++)
+            for (int i = 0; i < elementsArray.Length; i++)
             {
                 sortedElementsCounts[i] = 1;
 
                 for (int j = 0; j < i; j++)
                 {
-                    if (elementsArr[i] >= elementsArr[j])
+                    if (elementsArray[i] >= elementsArray[j])
                     {
                         sortedElementsCounts[i] = Math.Max(sortedElementsCounts[i], sortedElementsCounts[j] + 1);
                     }

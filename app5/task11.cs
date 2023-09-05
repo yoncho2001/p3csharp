@@ -7,11 +7,11 @@ namespace task11
         public static void Result()
         {
             int numberN = Functions.CanInt();
-            int[] elementsArr = Functions.InsertIntArr(numberN);
+            int[] elementsArray = Functions.InsertIntArray(numberN);
             int numToFind = Functions.CanInt();
 
             int left = 0;
-            int right = elementsArr.Length - 1;
+            int right = elementsArray.Length - 1;
             bool isInside = false;
             int index = 0;
 
@@ -19,13 +19,14 @@ namespace task11
             {
                 int mid = left + (right - left) / 2;
 
-                if (elementsArr[mid] == numToFind)
+                if (elementsArray[mid] == numToFind)
                 {
                     isInside = true;
                     index = mid;
                     break;
                 }
-                else if (elementsArr[mid] < numToFind)
+                
+                if (elementsArray[mid] < numToFind)
                 {
                     left = mid + 1;
                 }

@@ -7,18 +7,12 @@ namespace task12
         public static void Result()
         {
             string word = Console.ReadLine();
-            char[] alphabetArr = Functions.CrateTheAlphabet();
+            char[] alphabetArray = Functions.CreateTheAlphabet();
             string output = "";
 
             for (int i = 0; i < word.Length; i++)
             {
-                for (int j = 0; j < alphabetArr.Length; j++)
-                {
-                    if (alphabetArr[j] == word[i])
-                    {
-                        output += j.ToString() + "\n";
-                    }
-                }
+                output += Array.IndexOf(alphabetArray, word[i]).ToString() + "\n";
             }
 
             Console.WriteLine(output);

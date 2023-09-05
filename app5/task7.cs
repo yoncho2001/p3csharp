@@ -9,28 +9,28 @@ namespace task7
             int numberN = Functions.CanInt();
             int indexMin = 0;
             string output = "";
-            int[] elementsArr = Functions.InsertIntArr(numberN);
+            int[] elementsArray = Functions.InsertIntArray(numberN);
 
-            for (int i = 0; i < elementsArr.Length; i++)
+            for (int i = 0; i < elementsArray.Length; i++)
             {
-                for (int j = i; j < elementsArr.Length; j++)
+                for (int j = i; j < elementsArray.Length; j++)
                 {
-                    indexMin = elementsArr[indexMin] > elementsArr[j] ? j : indexMin;
+                    indexMin = elementsArray[indexMin] > elementsArray[j] ? j : indexMin;
                 }
 
                 if (indexMin != i)
                 {
-                    elementsArr[i] = elementsArr[i] + elementsArr[indexMin];
-                    elementsArr[indexMin] = elementsArr[i] - elementsArr[indexMin];
-                    elementsArr[i] = elementsArr[i] - elementsArr[indexMin];
+                    elementsArray[i] = elementsArray[i] + elementsArray[indexMin];
+                    elementsArray[indexMin] = elementsArray[i] - elementsArray[indexMin];
+                    elementsArray[i] = elementsArray[i] - elementsArray[indexMin];
                 }
 
                 indexMin = i + 1;
             }
 
-            for (int i = 0; i < elementsArr.Length; i++)
+            for (int i = 0; i < elementsArray.Length; i++)
             {
-                output += elementsArr[i].ToString() + "\n";
+                output += elementsArray[i].ToString() + "\n";
             }
 
             Console.WriteLine(output);
