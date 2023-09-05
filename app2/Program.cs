@@ -9,8 +9,6 @@ using task7;
 using task8;
 using task9;
 using task10;
-using task11;
-using task12;
 
 namespace MainNS
 {
@@ -29,32 +27,35 @@ namespace MainNS
 
             switch (tasks)
             {
+                case "task 1":
+                    task1.SumOfThreeNumbers.Result();
+                    break;
+                case "task 2":
+                    task2.CompanyInfo.Result();
+                    break;
+                case "task 3":
+                    task3.Circle.Result();
+                    break;
+                case "task 4":
+                    task4.NumberComparer.Result();
+                    break;
+                case "task 5":
+                    task5.QuadraticEquation.Result();
+                    break;
                 case "task 6":
-                    task6.FourDigits.Result();
+                    task6.SumOfFiveNumbers.Result();
                     break;
                 case "task 7":
-                    task7.PointInCircle.Result();
+                    task7.NumbersFromOnetoN.Result();
                     break;
                 case "task 8":
-                    task8.PrimeCheck.Result();
+                    task8.SumOfNNumbers.Result();
                     break;
                 case "task 9":
-                    task9.Trapezoids.Result();
+                    task9.FibonacciNumbers.Result();
                     break;
                 case "task 10":
-                    task10.PointCircleRectangle.Result();
-                    break;
-                case "task 11":
-                    task11.ThirdrdBit.Result();
-                    break;
-                case "task 12":
-                    task12.NthBit.Result();
-                    break;
-                case "task 13":
-                    task13.ModifyBit.Result();
-                    break;
-                case "task 14":
-                    task14.BitSwap.Result();
+                    task10.Interval.Result();
                     break;
                 default:
                     Console.WriteLine("Incorrect input");
