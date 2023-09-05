@@ -1,4 +1,6 @@
 ﻿using System;
+using task6;
+
 
 namespace MainNS
 {
@@ -33,10 +35,20 @@ namespace MainNS
                     task5.SortByStringLength.Result();
                     break;
                 case "task 6":
-                    //task6.Matrix.Result();
+                    Matrix m1 = new Matrix(2, 2, true);
+                    Matrix m2 = new Matrix(2, 2, true);
+
+                    Matrix sumResult = m1 + m2;
+                    Console.WriteLine("+:\n" + sumResult.ToString());
+
+                    Matrix subtractionResult = m1 - m2;
+                    Console.WriteLine("-:\n" + subtractionResult.ToString());
+
+                    Matrix multiplicationResult = m1 * m2;
+                    Console.WriteLine("*:\n" + multiplicationResult.ToString());
                     break;
                 case "task 7":
-                   task7.NumbersFromOnetoN.Result();
+                    task7.LargestAreaInMatrix.Result();
                     break;
                 default:
                     Console.WriteLine("Incorrect input");
