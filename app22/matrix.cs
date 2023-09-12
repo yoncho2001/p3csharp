@@ -114,6 +114,7 @@ public class Matrix<T> where T : IComparable
             for (int j = 0; j < matrix2.columnsData; j++)
             {
                 double sum = 0;
+                
                 for (int k = 0; k < matrix1.columnsData; k++)
                 {
                     var covert1 = Convert.ToDouble(matrix1[i, k]);
@@ -165,6 +166,7 @@ public class Matrix<T> where T : IComparable
 
             output += "\n";
         }
+
         return output;
     }
 }

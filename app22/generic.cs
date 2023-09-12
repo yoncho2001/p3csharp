@@ -119,6 +119,7 @@ public class GenericList<T> where T : IComparable
     public T Max()
     {
         T max = list[0];
+
         for (int i = 1; i < size; i++)
         {
             if (list[i].CompareTo(max) > 0)
@@ -126,12 +127,14 @@ public class GenericList<T> where T : IComparable
                 max = list[i];
             }
         }
+
         return max;
     }
 
     public T Min()
     {
         T min = list[0];
+        
         for (int i = 1; i < size; i++)
         {
             if (list[i].CompareTo(min) < 0)
@@ -139,6 +142,7 @@ public class GenericList<T> where T : IComparable
                 min = list[i];
             }
         }
+
         return min;
     }
 }

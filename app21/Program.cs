@@ -10,17 +10,13 @@ namespace MainNS
         {
             try
             {
-                Battery battery = new Battery();
-                battery.Model = "67Xg";
-                battery.HoursIdle = 20;
-                battery.HoursTalk = 15;
-                battery.BatteryType = BatteryType.LiIon;
+                Battery battery = new Battery("xp25", 20, 15, BatteryType.LiIon);
+                Console.WriteLine(battery);
 
-                Display display = new Display();
-                display.NumberColor = 100;
-                display.Size = 14;
+                Display display = new Display(100, 14);
+                Console.WriteLine(display);
 
-                GSM gsm = new GSM("grigs", "bay pesho", "Ivaka", 205, battery, display);
+                GSM gsm = new GSM("null", "bay pesho", "Ivaka", 205, battery, display);
                 //Console.WriteLine(gsm.ToString());
                 //GSM gsmDefault = GSM.iPhone4S;
                 //Console.WriteLine(GSM.iPhone4S);
@@ -42,7 +38,6 @@ namespace MainNS
             {
                 Console.WriteLine(e.Message);
             }
-        
         }
     }
 }

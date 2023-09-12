@@ -23,12 +23,6 @@ namespace Phone
             {
                 return model;
             }
-
-            set
-            {
-                Validate.isString(value);
-                model = value;
-            }
         }
 
         public int HoursIdle
@@ -36,12 +30,6 @@ namespace Phone
             get
             {
                 return hoursIdle;
-            }
-
-            set
-            {
-                Validate.isPositive(value);
-                hoursIdle = value;
             }
         }
 
@@ -51,12 +39,6 @@ namespace Phone
             {
                 return hoursTalk;
             }
-
-            set
-            {
-                Validate.isPositive(value);
-                hoursTalk = value;
-            }
         }
 
         public BatteryType BatteryType
@@ -65,36 +47,30 @@ namespace Phone
             {
                 return batteryType;
             }
-
-            set
-            {
-                batteryType = value;
-            }
         }
 
         public Battery()
         {
-            Model = "null";
-            HoursIdle = 0;
-            HoursTalk = 0;
-            BatteryType = BatteryType.LiIon;
+            this.model = "";
+            this.hoursIdle = 0;
+            this.hoursTalk = 0;
+            this. batteryType = default(BatteryType);
         }
 
         public Battery(string model)
         {
-
-            Model = model;
-            HoursIdle = 0;
-            HoursTalk = 0;
-            BatteryType = BatteryType.LiIon;
+            this.model = model;
+            this.hoursIdle = 0;
+            this.hoursTalk = 0;
+            this.batteryType = default(BatteryType);
         }
 
         public Battery(string model, int hoursIdle, int hoursTalk, BatteryType batteryType)
         {
-            Model = model;
-            HoursIdle = hoursIdle;
-            HoursTalk = hoursTalk;
-            BatteryType = batteryType;
+            this.model = model;
+            this.hoursIdle = hoursIdle;
+            this.hoursTalk = hoursTalk;
+            this.batteryType = batteryType;
         }
 
         public override string ToString()
@@ -114,12 +90,6 @@ namespace Phone
             {
                 return numberColor;
             }
-
-            set
-            {
-                Validate.isPositive(value);
-                numberColor = value;
-            }
         }
 
         public int Size
@@ -128,24 +98,18 @@ namespace Phone
             {
                 return size;
             }
-
-            set
-            {
-                Validate.isPositive(value);
-                size = value;
-            }
         }
 
         public Display()
         {
-            NumberColor = 0;
-            Size = 0;
+            this.numberColor = 0;
+            this.size = 0;
         }
 
         public Display(int numberColor, int size)
         {
-            NumberColor = numberColor;
-            Size = size;
+            this.numberColor = numberColor;
+            this.size = size;
         }
 
         public override string ToString()
@@ -166,11 +130,6 @@ namespace Phone
             {
                 return dateTime;
             }
-
-            set
-            {
-                dateTime = value;
-            }
         }
 
         public string DialledPhone
@@ -178,12 +137,6 @@ namespace Phone
             get
             {
                 return dialledPhone;
-            }
-
-            set
-            {
-                Validate.isPhone(value);
-                dialledPhone = value;
             }
         }
 
@@ -193,38 +146,32 @@ namespace Phone
             {
                 return duration;
             }
-
-            set
-            {
-                Validate.isPositive(value);
-                duration = value;
-            }
         }
 
         public Call()
         {
-            DateTimeElement = new DateTime();;
-            DialledPhone = "0100000000";
-            Duration = 0;
+            this.dateTime = new DateTime();;
+            this.dialledPhone = "0100000000";
+            this.duration = 0;
         }
 
         public Call(DateTime dateTime, string dialledPhone, int duration)
         {
-            DateTimeElement = dateTime;
-            DialledPhone = dialledPhone;
-            Duration = duration;
+            this.dateTime = dateTime;
+            this.dialledPhone = dialledPhone;
+            this.duration = duration;
         }
 
-        public Call(string dateTime, string dialledPhone, int duration)
+        public Call(string dateTimeIput, string dialledPhone, int duration)
         {
-            if (!DateTime.TryParseExact(dateTime, "dd.MM.yyyy:HH:mm", CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime newDate))
+            if (!DateTime.TryParseExact(dateTimeIput, "dd.MM.yyyy:HH:mm", CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime newDate))
             {
                 throw new ArgumentException("The date dont mach the patern dd.MM.yyyy:HH:mm");
             }
 
-            DateTimeElement = newDate;
-            DialledPhone = dialledPhone;
-            Duration = duration;
+            this.dateTime = newDate;
+            this.dialledPhone = dialledPhone;
+            this.duration = duration;
         }
 
         public override string ToString()
@@ -260,12 +207,6 @@ namespace Phone
             {
                 return model;
             }
-
-            set
-            {
-                Validate.isString(value);
-                model = value;
-            }
         }
 
         public string Manufacturer
@@ -273,12 +214,6 @@ namespace Phone
             get
             {
                 return manufacturer;
-            }
-
-            set
-            {
-                Validate.isString(value);
-                manufacturer = value;
             }
         }
 
@@ -288,12 +223,6 @@ namespace Phone
             {
                 return owner;
             }
-
-            set
-            {
-                Validate.isString(value);
-                owner = value;
-            }
         }
 
         public double Price
@@ -301,12 +230,6 @@ namespace Phone
             get
             {
                 return price;
-            }
-
-            set
-            {
-                Validate.isPositive(value);
-                price = value;
             }
         }
 
@@ -316,12 +239,6 @@ namespace Phone
             {
                 return battery;
             }
-
-            set
-            {
-                Validate.isNull(value);
-                battery = value;
-            }
         }
 
         public Display Display
@@ -329,12 +246,6 @@ namespace Phone
             get
             {
                 return display;
-            }
-
-            set
-            {
-                Validate.isNull(value);
-                display = value;
             }
         }
 
@@ -355,64 +266,64 @@ namespace Phone
 
         public GSM(string model, string manufacturer)
         {
-            Model = model;
-            Manufacturer = manufacturer;
-            Owner = "null";
-            Price = 0;
-            Battery = new Battery();
-            Display = new Display();
-            calls = new List<Call>();
-
+            this.model = model;
+            this.manufacturer = manufacturer;
+            this.owner = "null";
+            this.price = 0;
+            this.battery = new Battery();
+            this.display = new Display();
+            this.calls = new List<Call>();
         }
 
         public GSM(string model, string manufacturer, string owner, double price, Battery battery, Display display)
         {
-            Model = model;
-            Manufacturer = manufacturer;
-            Owner = owner;
-            Price = price;
-            Battery = battery;
-            Display = display;
-            calls = new List<Call>();
+            this.model = model;
+            this.manufacturer = manufacturer;
+            this.owner = owner;
+            this.price = price;
+            this.battery = battery;
+            this.display = display;
+            this.calls = new List<Call>();
         }
 
         public GSM(string model, string manufacturer, string owner, double price
             , string modelBattery, int batteryHoursIdle, int batteryHoursTalk, BatteryType batteryType
             , int displayNumberColor, int displaySize)
         {
-            Model = model;
-            Manufacturer = manufacturer;
-            Owner = owner;
-            Price = price;
-            Battery = new Battery(modelBattery, batteryHoursIdle, batteryHoursTalk, batteryType);
-            Display = new Display(displayNumberColor, displaySize);
-            calls = new List<Call>();
+            this.model = model;
+            this.manufacturer = manufacturer;
+            this.owner = owner;
+            this.price = price;
+            this.battery = new Battery(modelBattery, batteryHoursIdle, batteryHoursTalk, batteryType);
+            this.display = new Display(displayNumberColor, displaySize);
+            this.calls = new List<Call>();
         }
 
         public void addCalls(Call newCall)
         {
-           calls.Add(newCall);
+           this.calls.Add(newCall);
         }
 
         public void addCalls(DateTime dateTime, string dialledPhone, int duration)
         {
-           calls.Add(new Call(dateTime, dialledPhone, duration));
+           this.calls.Add(new Call(dateTime, dialledPhone, duration));
         }
 
         public void deleteLastCall()
         {
-           calls.RemoveAt(calls.Count - 1);
+           this.calls.RemoveAt(calls.Count - 1);
         }
 
         public void clearCalls()
         {
-           calls.Clear();
+           this.calls.Clear();
         }
 
         public double CallPrice(double price)
         {
             Validate.isPositive(price);
             double seconds = 0;
+
             for (int i = 0; i < calls.Count; i++)
             {
                 seconds += calls[i].Duration;

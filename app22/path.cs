@@ -77,6 +77,7 @@ namespace Point
             {
                 paths.Add(readText[i]);
             }
+            
             return paths;
         }
     }
