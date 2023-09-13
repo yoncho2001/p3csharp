@@ -151,7 +151,7 @@ namespace Phone
         public Call()
         {
             this.dateTime = new DateTime();;
-            this.dialledPhone = "0100000000";
+            this.dialledPhone = "null";
             this.duration = 0;
         }
 

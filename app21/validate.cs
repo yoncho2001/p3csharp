@@ -139,7 +139,7 @@ namespace validate
 
         public static void isPhone(string input)
         {
-            Regex rg = new Regex(@"^0?[1-9][0-9]{8}$");
+            Regex rg = new Regex(@"^0{1}[1-9][0-9]{8}$|^\+{1}[1-9]{3}[1-9][0-9]{8}$");
             if (input == null || !rg.IsMatch(input))
             {
                 throw new ArgumentException("the input is not phone number");

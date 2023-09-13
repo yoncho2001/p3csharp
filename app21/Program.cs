@@ -24,7 +24,7 @@ namespace MainNS
                 Console.WriteLine(gsm.CallHistory);
                 DateTime.TryParseExact("04.06.2023:13:20", "dd.MM.yyyy:HH:mm", CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime newDate);
 
-                gsm.addCalls(new Call("04.05.2023:12:56", "0845142000", 120));
+                gsm.addCalls(new Call("04.05.2023:12:56", "+359845142000", 120));
                 gsm.addCalls(new Call());
                 gsm.addCalls(new Call(newDate, "0845145656", 150));
                 gsm.addCalls(new Call("10.06.2023:12:56", "0845142522", 120));
