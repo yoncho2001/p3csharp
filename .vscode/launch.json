@@ -11,9 +11,9 @@
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
 
-            "program": "${workspaceFolder}/app13/bin/Debug/net7.0/app13.dll",
+            "program": "${workspaceFolder}/app24/bin/Debug/net7.0/app24.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/app13",
+            "cwd": "${workspaceFolder}/app24",
           
             // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
             "console": "integratedTerminal",
