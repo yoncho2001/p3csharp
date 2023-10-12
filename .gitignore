@@ -412,3 +412,10 @@ FodyWeavers.xsd
 
 # Built Visual Studio Code Extensions
 *.vsix
+/app/obj/project.nuget.cache
+/app/obj/project.assets.json
+/app/obj/app.csproj.nuget.dgspec.json
+/app/obj/app.csproj.nuget.g.props
+/app/obj/Debug/net7.0/app.assets.cache
+/app/obj/Debug/net7.0/app.GeneratedMSBuildEditorConfig.editorconfig
+/app/obj/Debug/net7.0/app.csproj.AssemblyReference.cache
