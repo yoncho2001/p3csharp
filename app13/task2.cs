@@ -8,13 +8,14 @@ namespace task2
         {
             const int start = 1;
             const int end = 100;
+            const int linesOInput = 10;
             string output = "1";
 
             int temp = start;
 
             try
             {
-                for (int i = 0; i < 10; i++)
+                for (int i = 0; i < linesOInput; i++)
                 {
                     temp = insertInRange(temp, end);
                     output += "<" + temp.ToString();
@@ -23,9 +24,9 @@ namespace task2
                 output += "<" + end.ToString();
                 Console.WriteLine(output);
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                Console.WriteLine("Exception");
+                Console.WriteLine(e.Message);
                 return;
             }
         }
