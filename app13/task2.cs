@@ -9,6 +9,7 @@ namespace task2
             const int start = 1;
             const int end = 100;
             const int linesOInput = 10;
+
             string output = "1";
 
             int temp = start;
