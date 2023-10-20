@@ -7,6 +7,7 @@ namespace task12
     {
         public static void Result()
         {
+            const int jump  = 3;
             string inputURL = Console.ReadLine();
             string output = "";
 
@@ -21,7 +22,7 @@ namespace task12
             string protocol = inputURL.Substring(0, protocolEnd);
             output += "[protocol] = " + protocol + "\n";
 
-            int serverStart = protocolEnd + 3;
+            int serverStart = protocolEnd + jump;
             int serverEnd = inputURL.IndexOf('/', serverStart);
 
             string server = inputURL.Substring(serverStart, serverEnd - serverStart);

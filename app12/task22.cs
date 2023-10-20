@@ -46,12 +46,10 @@ namespace task22
                 }
             }
 
-
             foreach (var element in letters)
             {
                 output += element.Key.ToString() + " " + element.Value.ToString() + "\n";
             }
-
 
             Console.WriteLine(output);
         }

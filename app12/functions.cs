@@ -74,7 +74,7 @@ namespace functions
             Console.WriteLine(output);
         }
 
-        public static string ReverceStr(string word)
+        public static string ReverseStr(string word)
         {
             StringBuilder reverse = new StringBuilder();
             for (int i = word.Length - 1; i >= 0; i--)

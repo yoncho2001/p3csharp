@@ -22,7 +22,6 @@ namespace task20
             {
                 if (!char.IsLetterOrDigit(input[i]) || i == input.Length - 1)
                 {
-
                     if (i == input.Length - 1 && char.IsLetterOrDigit(input[i]))
                     {
                         words.Add(input.Substring(count, i - count + 1));
@@ -38,7 +37,7 @@ namespace task20
 
             for (int i = 0; i < words.Count; i++)
             {
-                string reverse = Functions.ReverceStr(words[i]);
+                string reverse = Functions.ReverseStr(words[i]);
 
                 if (reverse.ToString() == words[i])
                 {
